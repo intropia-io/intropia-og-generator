@@ -1,5 +1,4 @@
-import type { NextPage } from "next";
-import { useRouter } from "next/router";
+import type { GetServerSideProps, NextPage } from "next";
 import styles from "../../styles/Template.module.css";
 
 type backgroundType = {
@@ -10,20 +9,28 @@ const backgroundDictionary: backgroundType = {
   organization: "tr3-og-dao.svg",
   event: "tr3-og-event.svg",
   quest: "tr3-og-quest.svg",
+  none: "tr3-og-common.svg",
 };
 
-const Generate: NextPage = () => {
-  const router = useRouter();
-  const { type, avatar, name, text } = router.query;
-  if (!type) return <></>;
+export const getServerSideProps: GetServerSideProps = async (req) => {
+  return {
+    props: req.query,
+  };
+};
+
+const Generate: NextPage = (props: any) => {
+  const { type, avatar, name, text } = props;
+
   return (
     <div
       className={styles.mainTemplate}
       style={{
+        backgroundSize: "cover!important",
         background: `url(/images/${
-          backgroundDictionary[type.toString().toLowerCase()]
+          type
+            ? backgroundDictionary[type.toString().toLowerCase()]
+            : backgroundDictionary.none
         }) center`,
-        backgroundSize: "cover",
       }}
     >
       {avatar && name ? (
