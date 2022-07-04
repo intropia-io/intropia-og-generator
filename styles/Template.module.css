@@ -4,6 +4,7 @@
     height: 100vh;
     width: 100vw;
     color: white;
+    flex-direction: column;
 }
 
 .mainTemplate .centered
@@ -13,6 +14,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    height: 100%;
 }
 
 .mainTemplate img

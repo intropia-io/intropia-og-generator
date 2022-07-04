@@ -33,6 +33,27 @@ const Generate: NextPage = (props: any) => {
         }) center`,
       }}
     >
+      {type && (
+        <div
+          style={{
+            textAlign: "center",
+            display: "flex",
+            justifyContent: "center",
+            width: "100%",
+            paddingTop: "60px",
+          }}
+        >
+          <img
+            src={"/images/tr3-logo.svg"}
+            style={{
+              border: 0,
+              borderRadius: 0,
+              width: "211px",
+              height: "50px",
+            }}
+          />
+        </div>
+      )}
       {avatar && name ? (
         <div className={styles.centered}>
           {type === "organization" || type === "event" ? (
