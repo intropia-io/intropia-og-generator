@@ -26,25 +26,28 @@ const Generate: NextPage = () => {
         backgroundSize: "cover",
       }}
     >
-      <div className={styles.centered}>
-        {type === "organization" || type === "event" ? (
-          <>
-            <img src={avatar?.toString()} />
-            <h1>{name}</h1>
-            {type === "organization" && <h3>find new opportunities</h3>}
-            {type === "event" && <h3>join the event</h3>}
-          </>
-        ) : (
-          <div className={styles.questCenter}>
-            <div className={styles.label} />
-            <div className={styles.topTab}>
+      if(avatar && name)
+      {
+        <div className={styles.centered}>
+          {type === "organization" || type === "event" ? (
+            <>
               <img src={avatar?.toString()} />
-              <span>{name}</span>
+              <h1>{name}</h1>
+              {type === "organization" && <h3>find new opportunities</h3>}
+              {type === "event" && <h3>join the event</h3>}
+            </>
+          ) : (
+            <div className={styles.questCenter}>
+              <div className={styles.label} />
+              <div className={styles.topTab}>
+                <img src={avatar?.toString()} />
+                <span>{name}</span>
+              </div>
+              <p>{text}</p>
             </div>
-            <p>{text}</p>
-          </div>
-        )}
-      </div>
+          )}
+        </div>
+      }
     </div>
   );
 };
