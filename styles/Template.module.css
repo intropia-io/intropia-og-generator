@@ -3,4 +3,97 @@
     display: flex;
     height: 100vh;
     width: 100vw;
+    color: white;
+}
+
+.mainTemplate .centered
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.mainTemplate img
+{
+    border-radius: 50%;
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 25px;
+    height: 300px;
+    width: 300px;
+}
+
+.mainTemplate h1
+{
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 60px;
+    margin: 5px;
+}
+
+.mainTemplate h3
+{
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 40px;
+    margin: 5px;
+}
+
+.mainTemplate .questCenter {
+    background-color: #141829;
+    width: 560px;
+    padding: 40px;
+    border-radius: 24px;
+    position: relative;
+}
+
+.mainTemplate .questCenter .topTab img
+{
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    width: 80px;
+    height: 80px;
+    margin: 0;
+}
+
+.mainTemplate .questCenter .label
+{
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    left: 0px;
+    top: 40px;
+    background: #57B962;
+    border-radius: 0px 8px 8px 0px;
+}
+
+.mainTemplate .questCenter .topTab
+{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.mainTemplate .questCenter .topTab span
+{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    opacity: 0.3;
+    line-height: 20px;
+}
+
+.mainTemplate .questCenter p
+{
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    margin-bottom: 0;
 }
