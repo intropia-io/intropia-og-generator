@@ -26,8 +26,7 @@ const Generate: NextPage = () => {
         backgroundSize: "cover",
       }}
     >
-      if(avatar && name)
-      {
+      {avatar && name ? (
         <div className={styles.centered}>
           {type === "organization" || type === "event" ? (
             <>
@@ -47,7 +46,9 @@ const Generate: NextPage = () => {
             </div>
           )}
         </div>
-      }
+      ) : (
+        <></>
+      )}
     </div>
   );
 };
