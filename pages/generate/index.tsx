@@ -64,7 +64,7 @@ const Generate: NextPage = (props: any) => {
               {type === "event" && <h3>join the event</h3>}
             </>
           ) : (
-            <div className={styles.questCenter}>
+            <div className={styles.questCenter} style={{marginTop: "-60px"}}>
               <div className={styles.label} />
               <div className={styles.topTab}>
                 <img src={avatar?.toString()} />
