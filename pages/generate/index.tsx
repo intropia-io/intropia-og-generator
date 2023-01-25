@@ -9,9 +9,9 @@ const backgroundDictionary: backgroundType = {
   organization: "og-dao.svg",
   event: "og-event.svg",
   quest: "og-quest.svg",
-  questEx: "og-exp-jobs.svg",
-  eventEx: "og-exp-events.svg",
-  organizationEx: "og-exp-org.svg",
+  questex: "og-exp-jobs.svg",
+  eventex: "og-exp-events.svg",
+  organizationex: "og-exp-org.svg",
   none: "og-common.svg",
 };
 
