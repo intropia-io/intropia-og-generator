@@ -6,10 +6,10 @@ type backgroundType = {
 };
 
 const backgroundDictionary: backgroundType = {
-  organization: "tr3-og-dao.svg",
-  event: "tr3-og-event.svg",
-  quest: "tr3-og-quest.svg",
-  none: "tr3-og-common.svg",
+  organization: "og-dao.svg",
+  event: "og-event.svg",
+  quest: "og-quest.svg",
+  none: "og-common.svg",
 };
 
 export const getServerSideProps: GetServerSideProps = async (req) => {
@@ -44,7 +44,7 @@ const Generate: NextPage = (props: any) => {
           }}
         >
           <img
-            src={"/images/tr3-logo.svg"}
+            src={"/images/logo.svg"}
             style={{
               border: 0,
               borderRadius: 0,
