@@ -9,6 +9,9 @@ const backgroundDictionary: backgroundType = {
   organization: "og-dao.svg",
   event: "og-event.svg",
   quest: "og-quest.svg",
+  questEx: "og-exp-jobs.svg",
+  eventEx: "og-exp-events.svg",
+  organizationEx: "og-exp-org.svg",
   none: "og-common.svg",
 };
 
@@ -26,11 +29,10 @@ const Generate: NextPage = (props: any) => {
       className={styles.mainTemplate}
       style={{
         backgroundSize: "cover!important",
-        background: `url(/images/${
-          type
+        background: `url(/images/${type
             ? backgroundDictionary[type.toString().toLowerCase()]
             : backgroundDictionary.none
-        }) center`,
+          }) center`,
       }}
     >
       {type && (
@@ -64,7 +66,7 @@ const Generate: NextPage = (props: any) => {
               {type === "event" && <h3>join the event</h3>}
             </>
           ) : (
-            <div className={styles.questCenter} style={{marginTop: "-60px"}}>
+            <div className={styles.questCenter} style={{ marginTop: "-60px" }}>
               <div className={styles.label} />
               <div className={styles.topTab}>
                 <img src={avatar?.toString()} />
