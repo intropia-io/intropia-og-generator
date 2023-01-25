@@ -30,52 +30,52 @@ const Generate: NextPage = (props: any) => {
       style={{
         backgroundSize: "cover!important",
         background: `url(/images/${type
-            ? backgroundDictionary[type.toString().toLowerCase()]
-            : backgroundDictionary.none
+          ? backgroundDictionary[type.toString().toLowerCase()]
+          : backgroundDictionary.none
           }) center`,
       }}
     >
-      {type && (
-        <div
-          style={{
-            textAlign: "center",
-            display: "flex",
-            justifyContent: "center",
-            width: "100%",
-            paddingTop: "60px",
-          }}
-        >
-          <img
-            src={"/images/logo.svg"}
-            style={{
-              border: 0,
-              borderRadius: 0,
-              width: "211px",
-              height: "50px",
-            }}
-          />
-        </div>
-      )}
       {avatar && name ? (
-        <div className={styles.centered}>
-          {type === "organization" || type === "event" ? (
-            <>
-              <img src={avatar?.toString()} />
-              <h1>{name}</h1>
-              {type === "organization" && <h3>find new opportunities</h3>}
-              {type === "event" && <h3>join the event</h3>}
-            </>
-          ) : (
-            <div className={styles.questCenter} style={{ marginTop: "-60px" }}>
-              <div className={styles.label} />
-              <div className={styles.topTab}>
+        <>
+          <div
+            style={{
+              textAlign: "center",
+              display: "flex",
+              justifyContent: "center",
+              width: "100%",
+              paddingTop: "60px",
+            }}
+          >
+            <img
+              src={"/images/logo.svg"}
+              style={{
+                border: 0,
+                borderRadius: 0,
+                width: "211px",
+                height: "50px",
+              }}
+            />
+          </div>
+          <div className={styles.centered}>
+            {type === "organization" || type === "event" ? (
+              <>
                 <img src={avatar?.toString()} />
-                <span>{name}</span>
+                <h1>{name}</h1>
+                {type === "organization" && <h3>find new opportunities</h3>}
+                {type === "event" && <h3>join the event</h3>}
+              </>
+            ) : (
+              <div className={styles.questCenter} style={{ marginTop: "-60px" }}>
+                <div className={styles.label} />
+                <div className={styles.topTab}>
+                  <img src={avatar?.toString()} />
+                  <span>{name}</span>
+                </div>
+                <p>{text}</p>
               </div>
-              <p>{text}</p>
-            </div>
-          )}
-        </div>
+            )}
+          </div>
+        </>
       ) : (
         <></>
       )}
