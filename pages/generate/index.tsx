@@ -60,7 +60,7 @@ const Generate: NextPage = (props: any) => {
             {type === "organization" || type === "event" ? (
               <>
                 <img src={avatar?.toString()} />
-                <h1>{name}</h1>
+                <h1 style={{ textAlign: "center" }}>{name}</h1>
                 {type === "organization" && <h3>find new opportunities</h3>}
                 {type === "event" && <h3>join the event</h3>}
               </>
