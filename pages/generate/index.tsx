@@ -22,7 +22,7 @@ export const getServerSideProps: GetServerSideProps = async (req) => {
 };
 
 const Generate: NextPage = (props: any) => {
-  const { type, avatar, name, text } = props;
+  const { type, avatar, name, text, salary, salaryIcon } = props;
 
   return (
     <div
@@ -72,6 +72,7 @@ const Generate: NextPage = (props: any) => {
                   <span>{name}</span>
                 </div>
                 <p>{text}</p>
+                {salary && salaryIcon && <p style={{ display: "flex", alignItems: "center", gap: "10px" }}><img style={{ height: "50px", width: "50px", margin: 0, border: "none" }} src={salaryIcon.toString()} />{salary}</p>}
               </div>
             )}
           </div>
