@@ -72,7 +72,7 @@ const Generate: NextPage = (props: any) => {
                   <span>{name}</span>
                 </div>
                 <p>{text}</p>
-                {salary && salaryIcon && <p style={{ display: "flex", alignItems: "center", gap: "10px" }}><img style={{ height: "50px", width: "50px", margin: 0, border: "none" }} src={salaryIcon.toString()} />{salary}</p>}
+                {salary && salaryIcon && <p style={{ display: "flex", alignItems: "center", gap: "10px", fontSize: "35px" }}><img style={{ height: "50px", width: "50px", margin: 0, border: "none" }} src={salaryIcon.toString()} />{salary.toLowerCase()}</p>}
               </div>
             )}
           </div>
